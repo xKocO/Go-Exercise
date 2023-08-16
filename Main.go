@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	PrintTime()
-	Rolld20()
+	//PrintTime()
+	//Rolld20()
 }
 
 func PrintTime() {
