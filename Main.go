@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"time"
-	//"./Functions/Dice"
 )
 
 func main() {
