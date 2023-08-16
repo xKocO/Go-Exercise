@@ -1,3 +1,3 @@
-module github.com/xKocO/Go-Exercise
+module Simple_Go_exercise
 
 go 1.21.0

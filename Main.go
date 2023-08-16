@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 	"time"
-	//"Simple_Go_exercise/Functions/Dice"
+	//"./Functions/Dice"
 )
 
 func main() {
-	//PrintTime()
-	//Rolld20()
+	PrintTime()
+	//Dice.Rolld20()
 }
 
 func PrintTime() {
