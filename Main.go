@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
+	//"Simple_Go_exercise/Functions/Dice"
 )
 
 func main() {
