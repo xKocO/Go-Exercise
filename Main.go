@@ -1,28 +1,39 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strings"
 
 	"github.com/xKocO/Go-Exercise.git/Functions/Dice"
 	"github.com/xKocO/Go-Exercise.git/Functions/TimeNow"
 )
+
+var called bool = true
 
 func main() {
 	Program()
 }
 
 func Program() {
-	var x int
-	var called bool = true
-
 	if called {
-		fmt.Println("Write 1 if you wanna roll a d20, write 2 if you want to know your local time!")
+		fmt.Println("Write 'Dice' if you wanna roll a d20, write 'Time' if you want to know your local date and time!")
 	}
-	fmt.Scanln(x)
+	reader := bufio.NewReader(os.Stdin)
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		fmt.Println("An error occured while reading input. Please try again", err)
+		return
+	}
+	Action(input)
+}
 
-	if x == 1 {
+func Action(x string) {
+	x = strings.TrimSpace(x)
+	if x == "Dice" {
 		Dice.Rolld20()
-	} else if x == 2 {
+	} else if x == "Time" {
 		TimeNow.GiveTime()
 	} else {
 		fmt.Println("Please input a correct answer!")
